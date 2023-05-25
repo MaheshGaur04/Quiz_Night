@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" class="rel">
+    <title>Quiz_Night</title>
+</head>
+<body>
+    <form id="myForm">
+        <div class="home-box custom-box">
+            <h3>Instructions</h3>
+            <p>Total number of questions: <span class="total-question"></span></p>
+            <p>You can attempt the quiz multiple times</p>
+            <p>Each question carries one point. No negative marking for wrong answers</p>
+            <p>Questions are of Multiple Choice</p>
+            <h2>Login</h2>
+            <input type="email" id="email" class="btn" placeholder="Mail-Id" required maxlength="30">
+            <input type="password" id="password" class="btn" placeholder="password" required maxlength="15">
+            <button type="button" class="btn" onclick="startQuiz1()">Start Quiz</button>
+            <!--<label for="topic">Choose Topic:</label>
+        <select name="topic" id="topic">
+			<option value="sports">Sports</option>
+			<option value="logic">Logic</option>
+			<option value="gk">GK</option>
+			<option value="computer">Computer</option>
+		</select>-->
+        </div>
+    </Form>
+    <div class="quiz-box custom-box hide">
+        <div class="question-number">
+        </div>
+        <div class="question-text">
+        </div>
+        <div class="option-container">
+        </div>
+        <div class="next-question-btn">
+            <button type="button" class="btn next-btn" onclick="next()">Next</button>
+            <button type="button" class="btn exit-btn" onclick="quizOver()">Quit</button>
+        </div>
+        <div class="answers-indicator">
+
+        </div>
+    </div>
+    <div class="result-box custom-box hide">
+        <h1>Result</h1>
+        <table>
+            <tr>
+                <td>User-ID</td>
+                <td><span class="email-id"></span></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><span class="password-pass"></span></td>
+            </tr>
+            <tr>
+                <td>Total Question</td>
+                <td><span class="total-question"></span></td>
+            </tr>
+            <tr>
+                <td>Attempt</td>
+                <td><span class="total-attempt"></span></td>
+            </tr>
+            <tr>
+                <td>Correct</td>
+                <td><span class="total-correct"></span></td>
+            </tr>
+            <tr>
+                <td>Wrong</td>
+                <td><span class="total-wrong"></span></td>
+            </tr>
+            <tr>
+                <td>Percentage</td>
+                <td><span class="percentage"></span></td>
+            </tr>
+            <tr>
+                <td>Your Total Score</td>
+                <td><span class="total-score"></span></td>
+            </tr>
+        </table>
+        <button type="button" class="btn try-again-btn" onclick="tryAgain()">Try Again</button>
+        <button type="button" class="btn go-home-btn" onclick="goToHome()">Go To Home</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
